@@ -7,11 +7,13 @@ class CustomSvgPicture extends StatelessWidget {
     required this.path,
     this.height,
     this.width,
+    this.color,
   });
 
   final String path;
   final double? height;
   final double? width;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +22,9 @@ class CustomSvgPicture extends StatelessWidget {
       height: height,
       width: width,
       fit: BoxFit.contain,
+      colorFilter: color != null
+      ? ColorFilter.mode(color!, BlendMode.srcIn)
+      : null
     );
   }
 }
