@@ -7,4 +7,8 @@ class AppImages {
   static const String twitterSvg = 'assets/icons/social_icons/twitter.svg';
   static const String appleSvg = 'assets/icons/social_icons/ios.svg';
 
+   static const String homeSvg = 'assets/icons/bottom_nav/home.svg';
+   static const String orderSvg = 'assets/icons/bottom_nav/order.svg';
+   static const String profileSvg = 'assets/icons/bottom_nav/user.svg';
+
 }
