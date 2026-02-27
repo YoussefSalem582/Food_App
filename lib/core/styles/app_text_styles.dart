@@ -7,6 +7,12 @@ class TextStyles {
    
   );
 
+  static const TextStyle appBarTitle = TextStyle(
+    fontSize: 17,
+    fontWeight: FontWeight.w400,
+   
+  );
+
   static const TextStyle title = TextStyle(
     fontSize: 16,
   );
