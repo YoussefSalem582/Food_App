@@ -10,7 +10,8 @@ class AppColors {
   static const Color ightColor = Color(0xff32343E);
   static const Color textfiedColor = Color(0xffF0F5FA);
   static const Color sidetextColor = Color(0xff646982);
-
+  static const Color profileColor = Color(0xffECF0F4);
+  static const Color cartColor = Color(0xff369BFF);
 
 
 

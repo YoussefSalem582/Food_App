@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_app/core/constants/app_images.dart';
 import 'package:food_app/core/styles/app_colors.dart';
 import 'package:food_app/core/widgets/custom_svg_picture.dart';
+import 'package:food_app/features/profile/screens/profile_screen.dart';
 
 class MainAppScreen extends StatefulWidget {
   const MainAppScreen({super.key});
@@ -17,7 +18,7 @@ class _MainAppScreenState extends State<MainAppScreen> {
   List<Widget> screens = [
     Center(child: Text("Home Page")),
     Center(child: Text("My-order Page")),
-    Center(child: Text("Profile Page")),
+    ProfileScreen(),
   ];
   @override
   Widget build(BuildContext context) {

@@ -60,6 +60,7 @@ flutter:
     - assets/icons/pattern_icons/
     - assets/icons/social_icons/
     - assets/icons/bottom_nav/
+    - assets/icons/profile/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 
