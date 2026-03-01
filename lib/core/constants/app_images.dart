@@ -24,6 +24,12 @@ class AppImages {
   static const String logoutSvg = 'assets/icons/profile/logout.svg';
   static const String callSvg = 'assets/icons/profile/call.svg';
   static const String emailSvg = 'assets/icons/profile/email.svg';
+  static const String pencilSvg = 'assets/icons/pencil.svg';
+  static const String homeAddressSvg = 'assets/icons/home_address.svg';
+  static const String workAddressSvg = 'assets/icons/work_address.svg';
+  static const String editIconSvg = 'assets/icons/edit_icon.svg';
+  static const String deleteIconSvg = 'assets/icons/delete_icon.svg';
+  static const String map = 'assets/images/maps.jpeg';
 
 
 
