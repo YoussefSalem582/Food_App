@@ -4,6 +4,7 @@ import 'package:food_app/core/constants/app_images.dart';
 import 'package:food_app/core/functions/navigation.dart';
 import 'package:food_app/core/styles/app_colors.dart';
 import 'package:food_app/core/styles/app_text_styles.dart';
+import 'package:food_app/features/profile/screens/profile_address_screen.dart';
 import 'package:food_app/features/profile/screens/profile_info_screen.dart';
 import 'package:food_app/features/profile/widgets/profile_section_container.dart';
 import 'package:food_app/features/profile/widgets/custom_list_tile.dart';
@@ -74,6 +75,9 @@ class ProfileScreen extends StatelessWidget {
                   CustomListTile(
                     label: "Addresses",
                     assetName: AppImages.addressSvg,
+                    onTap: (){
+                      pushTo(context, ProfileAddressScreen());
+                    },
                   ),
                 ],
               ),
