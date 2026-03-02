@@ -1,8 +1,11 @@
 class AppImages {
   static const String logoSvg = 'assets/icons/app_logo.svg';
-  static const String patternOrangeSvg = 'assets/icons/pattern_icons/pattern_orange.svg';
-  static const String patterngraySvg = 'assets/icons/pattern_icons/pattern_gray.svg';
-  static const String patternBackgroundSvg = 'assets/icons/pattern_icons/pattern_background.svg';
+  static const String patternOrangeSvg =
+      'assets/icons/pattern_icons/pattern_orange.svg';
+  static const String patterngraySvg =
+      'assets/icons/pattern_icons/pattern_gray.svg';
+  static const String patternBackgroundSvg =
+      'assets/icons/pattern_icons/pattern_background.svg';
   static const String facebookSvg = 'assets/icons/social_icons/facebook.svg';
   static const String twitterSvg = 'assets/icons/social_icons/twitter.svg';
   static const String appleSvg = 'assets/icons/social_icons/ios.svg';
@@ -29,8 +32,18 @@ class AppImages {
   static const String workAddressSvg = 'assets/icons/work_address.svg';
   static const String editIconSvg = 'assets/icons/edit_icon.svg';
   static const String deleteIconSvg = 'assets/icons/delete_icon.svg';
+  static const String starSvg = 'assets/icons/star.svg';
+  static const String deliverySvg = 'assets/icons/delivery.svg';
+  static const String clockSvg = 'assets/icons/clock.svg';
   static const String map = 'assets/images/maps.jpeg';
 
-
-
+  // Food category images
+  static const String pizza = 'assets/images/pizza.png';
+  static const String burger = 'assets/images/burger.png';
+  static const String chicken = 'assets/images/chicken.png';
+  static const String noodles = 'assets/images/noodles.png';
+  static const String koshary = 'assets/images/koshary.png';
+  static const String breakfast = 'assets/images/breakfast.png';
+  static const String bakery = 'assets/images/bakery.png';
+  static const String beverages = 'assets/images/beverages.png';
 }

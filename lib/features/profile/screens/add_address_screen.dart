@@ -116,20 +116,20 @@ class AddAddressScreen extends StatelessWidget {
                       CustomChip(
                         label: 'Home',
                         backgroundColor: AppColors.primaryColor,
-                        labelColor: AppColors.backgroundColor
-                        ),
+                        labelColor: AppColors.backgroundColor,
+                      ),
                       SizedBox(width: 10),
                       CustomChip(
                         label: 'Work',
                         backgroundColor: AppColors.profileColor,
-                        labelColor: AppColors.blackColor
-                        ),
+                        labelColor: AppColors.blackColor,
+                      ),
                       SizedBox(width: 10),
                       CustomChip(
                         label: 'Other',
                         backgroundColor: AppColors.profileColor,
-                        labelColor: AppColors.blackColor
-                        ),
+                        labelColor: AppColors.blackColor,
+                      ),
                       SizedBox(width: 10),
                     ],
                   ),

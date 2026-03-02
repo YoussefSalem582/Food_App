@@ -19,12 +19,12 @@ class CustomSvgPicture extends StatelessWidget {
   Widget build(BuildContext context) {
     return SvgPicture.asset(
       path,
-      height: height,
-      width: width,
+      height: height ?? 18,
+      width: width ?? 18,
       fit: BoxFit.contain,
       colorFilter: color != null
-      ? ColorFilter.mode(color!, BlendMode.srcIn)
-      : null
+          ? ColorFilter.mode(color!, BlendMode.srcIn)
+          : null,
     );
   }
 }
