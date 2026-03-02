@@ -27,8 +27,8 @@ class PopularFastFoodBuilder extends StatelessWidget {
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             crossAxisSpacing: 14,
-            mainAxisSpacing: 14,
-            childAspectRatio: 0.85,
+            mainAxisSpacing: 16,
+            mainAxisExtent: 190,
           ),
           itemCount: popularFoods.length,
           itemBuilder: (_, i) => PopularFoodCard(model: popularFoods[i]),

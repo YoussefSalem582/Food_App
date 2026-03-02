@@ -11,7 +11,9 @@ class CustomTextFormField extends StatelessWidget {
     this.validator,
     this.enabled = true,
     this.onTap,
-    this.onChanged, this.maxLines,
+    this.onChanged,
+    this.maxLines,
+    this.onFieldSubmitted,
   });
 
   final String? hintText;
@@ -22,6 +24,7 @@ class CustomTextFormField extends StatelessWidget {
   final bool enabled;
   final Function()? onTap;
   final Function(String)? onChanged;
+  final Function(String)? onFieldSubmitted;
   final int? maxLines;
 
   @override
@@ -33,6 +36,7 @@ class CustomTextFormField extends StatelessWidget {
       validator: validator,
       onTap: onTap,
       onChanged: onChanged,
+      onFieldSubmitted: onFieldSubmitted,
       decoration: InputDecoration(
         hintText: hintText,
         prefixIcon: prefixIcon,
@@ -54,13 +58,13 @@ class CustomTextFormField extends StatelessWidget {
           borderSide: BorderSide.none,
         ),
 
-        
-        contentPadding:
-            const EdgeInsets.symmetric(horizontal: 19, vertical: 23),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 19,
+          vertical: 23,
+        ),
         hintStyle: const TextStyle(
           color: AppColors.lightGrayColor,
           fontSize: 16,
-        
         ),
       ),
     );

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/core/functions/navigation.dart';
 import 'package:food_app/core/widgets/app_text_form_field.dart';
 import 'package:food_app/core/widgets/header_section.dart';
 
 import '../widgets/popular_fast_food_builder.dart';
 import '../widgets/recent_keywords_builder.dart';
 import '../widgets/suggested_restaurants_builder.dart';
+import 'search_results_screen.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -48,11 +50,22 @@ class _SearchScreenState extends State<SearchScreen> {
                               searchKey = value;
                             });
                           },
+                          onFieldSubmitted: (value) {
+                            if (value.trim().isNotEmpty) {
+                              pushTo(
+                                context,
+                                SearchResultsScreen(query: value.trim()),
+                              );
+                            }
+                          },
                         ),
                       ),
                     ),
                     const SizedBox(height: 24),
-                    const RecentKeywordsBuilder(),
+                    RecentKeywordsBuilder(
+                      onKeywordTap: (keyword) =>
+                          pushTo(context, SearchResultsScreen(query: keyword)),
+                    ),
                     const SizedBox(height: 24),
                     const SuggestedRestaurantsBuilder(),
                     const SizedBox(height: 24),

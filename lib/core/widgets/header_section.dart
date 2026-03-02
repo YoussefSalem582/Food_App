@@ -11,18 +11,26 @@ class HeaderSection extends StatelessWidget {
     this.subtitle,
     this.label,
     this.showBackButton = false,
+    this.showDropdown = false,
     this.cartCount = 0,
     this.onLeadingTap,
     this.onCartTap,
+    this.trailing,
   });
 
   final String title;
   final String? label;
   final String? subtitle;
   final bool showBackButton;
+
+  /// Shows a dropdown arrow next to the title (independent of subtitle)
+  final bool showDropdown;
   final int cartCount;
   final VoidCallback? onLeadingTap;
   final VoidCallback? onCartTap;
+
+  /// When provided, replaces the cart button entirely
+  final Widget? trailing;
 
   @override
   Widget build(BuildContext context) {
@@ -62,26 +70,66 @@ class HeaderSection extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style: TextStyles.caption1.copyWith(
-                      color: AppColors.blackColor,
-                      fontWeight: FontWeight.w600,
-                    ),
+              if (showDropdown)
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 14,
+                    vertical: 6,
                   ),
-                  if (subtitle != null) ...[
-                    const SizedBox(width: 4),
-                    const Icon(
-                      Icons.keyboard_arrow_down_rounded,
-                      color: AppColors.blackColor,
-                      size: 18,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(24),
+                    border: Border.all(
+                      color: AppColors.lightGrayColor.withOpacity(0.25),
                     ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.06),
+                        blurRadius: 8,
+                        offset: const Offset(0, 2),
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        title,
+                        style: TextStyles.caption1.copyWith(
+                          color: AppColors.blackColor,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      const SizedBox(width: 2),
+                      const Icon(
+                        Icons.keyboard_arrow_down_rounded,
+                        color: AppColors.blackColor,
+                        size: 18,
+                      ),
+                    ],
+                  ),
+                )
+              else
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      title,
+                      style: TextStyles.caption1.copyWith(
+                        color: AppColors.blackColor,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    if (subtitle != null) ...[
+                      const SizedBox(width: 4),
+                      const Icon(
+                        Icons.keyboard_arrow_down_rounded,
+                        color: AppColors.blackColor,
+                        size: 18,
+                      ),
+                    ],
                   ],
-                ],
-              ),
+                ),
               if (subtitle != null)
                 Text(
                   subtitle!,
@@ -92,45 +140,48 @@ class HeaderSection extends StatelessWidget {
             ],
           ),
         ),
-        // Cart button with badge
-        GestureDetector(
-          onTap: onCartTap,
-          child: Stack(
-            clipBehavior: Clip.none,
-            children: [
-              CircleIconButton(
-                bgColor: AppColors.blackColor,
-                child: CustomSvgPicture(
-                  path: 'assets/icons/cart.svg',
-                  color: Colors.white,
+        // Trailing: custom widget or default cart button
+        if (trailing != null)
+          trailing!
+        else
+          GestureDetector(
+            onTap: onCartTap,
+            child: Stack(
+              clipBehavior: Clip.none,
+              children: [
+                CircleIconButton(
+                  bgColor: AppColors.blackColor,
+                  child: CustomSvgPicture(
+                    path: 'assets/icons/cart.svg',
+                    color: Colors.white,
+                  ),
                 ),
-              ),
-              if (cartCount > 0)
-                Positioned(
-                  top: -4,
-                  right: -4,
-                  child: Container(
-                    width: 20,
-                    height: 20,
-                    decoration: const BoxDecoration(
-                      color: AppColors.primaryColor,
-                      shape: BoxShape.circle,
-                    ),
-                    child: Center(
-                      child: Text(
-                        '$cartCount',
-                        style: TextStyles.caption2.copyWith(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 10,
+                if (cartCount > 0)
+                  Positioned(
+                    top: -4,
+                    right: -4,
+                    child: Container(
+                      width: 20,
+                      height: 20,
+                      decoration: const BoxDecoration(
+                        color: AppColors.primaryColor,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Center(
+                        child: Text(
+                          '$cartCount',
+                          style: TextStyles.caption2.copyWith(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 10,
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
-            ],
+              ],
+            ),
           ),
-        ),
       ],
     );
   }
