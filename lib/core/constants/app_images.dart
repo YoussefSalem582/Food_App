@@ -46,4 +46,7 @@ class AppImages {
   static const String breakfast = 'assets/images/breakfast.png';
   static const String bakery = 'assets/images/bakery.png';
   static const String beverages = 'assets/images/beverages.png';
+
+  // SVG illustrations
+  static const String ingridentsSvg = 'assets/images/ingridents.svg';
 }

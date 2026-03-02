@@ -23,6 +23,9 @@ List<PopularFoodModel> allFoodItems = [
     name: 'European Pizza',
     restaurantName: 'Uttora Coffee House',
     price: '\$35',
+    rating: 4.5,
+    deliveryFee: '\$2.00',
+    deliveryTime: '30 min',
     image:
         'https://static.vecteezy.com/system/resources/thumbnails/045/383/391/small/a-cheesy-delicious-pizza-with-tasty-pepperoni-on-a-transparent-background-png.png',
   ),
@@ -31,6 +34,9 @@ List<PopularFoodModel> allFoodItems = [
     name: 'Buffalo Pizza',
     restaurantName: 'Cafenio Coffee Club',
     price: '\$28',
+    rating: 4.5,
+    deliveryFee: '\$2.00',
+    deliveryTime: '30 min',
     image:
         'https://static.vecteezy.com/system/resources/previews/058/697/566/non_2x/delicious-buffalo-chicken-pizza-on-transparent-background-free-png.png',
   ),
@@ -39,6 +45,9 @@ List<PopularFoodModel> allFoodItems = [
     name: 'Crispy Burger',
     restaurantName: 'Rose Garden Restaurant',
     price: '\$45',
+    rating: 4.7,
+    deliveryFee: 'Free',
+    deliveryTime: '20 min',
     image:
         'https://static.vecteezy.com/system/resources/thumbnails/070/466/459/small/double-patty-chicken-burger-topped-with-ketchup-cheese-and-lettuce-on-transparent-background-png.png',
   ),
@@ -47,6 +56,9 @@ List<PopularFoodModel> allFoodItems = [
     name: 'Spicy Noodles',
     restaurantName: 'Noodle House',
     price: '\$22',
+    rating: 4.6,
+    deliveryFee: '\$1.50',
+    deliveryTime: '35 min',
     image:
         'https://static.vecteezy.com/system/resources/previews/055/793/634/non_2x/bowl-of-hot-spicy-noodles-on-transparent-background-free-png.png',
   ),
@@ -55,6 +67,9 @@ List<PopularFoodModel> allFoodItems = [
     name: 'Burger Bistro',
     restaurantName: 'Rose Garden',
     price: '\$40',
+    rating: 4.7,
+    deliveryFee: 'Free',
+    deliveryTime: '20 min',
     image:
         'https://static.vecteezy.com/system/resources/thumbnails/070/466/459/small/double-patty-chicken-burger-topped-with-ketchup-cheese-and-lettuce-on-transparent-background-png.png',
   ),
@@ -63,6 +78,9 @@ List<PopularFoodModel> allFoodItems = [
     name: "Smokin' Burger",
     restaurantName: 'Cafenio Restaurant',
     price: '\$60',
+    rating: 4.3,
+    deliveryFee: 'Free',
+    deliveryTime: '25 min',
     image:
         'https://static.vecteezy.com/system/resources/thumbnails/070/466/459/small/double-patty-chicken-burger-topped-with-ketchup-cheese-and-lettuce-on-transparent-background-png.png',
   ),
@@ -71,6 +89,9 @@ List<PopularFoodModel> allFoodItems = [
     name: 'Buffalo Burgers',
     restaurantName: 'Kaji Firm Kitchen',
     price: '\$75',
+    rating: 4.4,
+    deliveryFee: '\$1.00',
+    deliveryTime: '30 min',
     image:
         'https://static.vecteezy.com/system/resources/thumbnails/070/466/459/small/double-patty-chicken-burger-topped-with-ketchup-cheese-and-lettuce-on-transparent-background-png.png',
   ),
@@ -79,6 +100,9 @@ List<PopularFoodModel> allFoodItems = [
     name: 'Bullseye Burgers',
     restaurantName: 'Kabab Restaurant',
     price: '\$94',
+    rating: 4.8,
+    deliveryFee: 'Free',
+    deliveryTime: '15 min',
     image:
         'https://static.vecteezy.com/system/resources/thumbnails/070/466/459/small/double-patty-chicken-burger-topped-with-ketchup-cheese-and-lettuce-on-transparent-background-png.png',
   ),
@@ -87,6 +111,9 @@ List<PopularFoodModel> allFoodItems = [
     name: 'Grilled Chicken',
     restaurantName: 'Golden Chicken',
     price: '\$30',
+    rating: 4.3,
+    deliveryFee: 'Free',
+    deliveryTime: '25 min',
     image:
         'https://static.vecteezy.com/system/resources/thumbnails/027/555/095/small/grilled-chicken-on-a-transparent-background-free-png.png',
   ),
@@ -95,6 +122,9 @@ List<PopularFoodModel> allFoodItems = [
     name: 'Chicken Shawarma',
     restaurantName: 'Golden Chicken',
     price: '\$18',
+    rating: 4.3,
+    deliveryFee: 'Free',
+    deliveryTime: '25 min',
     image:
         'https://static.vecteezy.com/system/resources/thumbnails/027/555/095/small/grilled-chicken-on-a-transparent-background-free-png.png',
   ),
