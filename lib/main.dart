@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:food_app/features/main/main_app_screen.dart';
+import 'package:food_app/features/splash/splash_screen.dart';
 
 import 'core/styles/app_themes.dart';
 
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           child: child ?? Container(),
         );
       },
-      home: MainAppScreen(),
+      home: SplashScreen(),
     );
   }
 }

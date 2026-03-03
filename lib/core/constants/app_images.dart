@@ -49,4 +49,7 @@ class AppImages {
 
   // SVG illustrations
   static const String ingridentsSvg = 'assets/images/ingridents.svg';
+
+  static const String patternBackgroundorgSvg =
+      'assets/icons/pattern_icons/pattern_backgroundorg.svg';
 }
