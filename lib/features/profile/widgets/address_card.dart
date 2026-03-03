@@ -19,7 +19,7 @@ class AddressCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 330,
+      width: double.infinity,
       height: 100,
       decoration: BoxDecoration(
         color: AppColors.profileColor,
@@ -32,18 +32,14 @@ class AddressCard extends StatelessWidget {
             Align(
               alignment: Alignment(0, -1),
               child: Container(
-                width: 50, 
+                width: 50,
                 height: 50,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: AppColors.backgroundColor,
                 ),
                 child: Center(
-                  child: SvgPicture.asset(
-                    assetName,
-                    width: 20, 
-                    height: 20,
-                  ),
+                  child: SvgPicture.asset(assetName, width: 20, height: 20),
                 ),
               ),
             ),

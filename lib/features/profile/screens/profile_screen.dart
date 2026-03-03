@@ -6,8 +6,8 @@ import 'package:food_app/core/styles/app_colors.dart';
 import 'package:food_app/core/styles/app_text_styles.dart';
 import 'package:food_app/features/profile/screens/profile_address_screen.dart';
 import 'package:food_app/features/profile/screens/profile_info_screen.dart';
-import 'package:food_app/features/profile/widgets/profile_section_container.dart';
 import 'package:food_app/features/profile/widgets/custom_list_tile.dart';
+import 'package:food_app/features/profile/widgets/profile_section_container.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -75,15 +75,17 @@ class ProfileScreen extends StatelessWidget {
                   CustomListTile(
                     label: "Addresses",
                     assetName: AppImages.addressSvg,
-                    onTap: (){
+                    onTap: () {
                       pushTo(context, ProfileAddressScreen());
                     },
                   ),
                 ],
               ),
               SizedBox(height: 20),
-              ProfileSectionContainer(height: 240, children: [
-                CustomListTile(
+              ProfileSectionContainer(
+                height: 240,
+                children: [
+                  CustomListTile(
                     label: "Cart",
                     assetName: AppImages.profilecartSvg,
                   ),
@@ -98,14 +100,14 @@ class ProfileScreen extends StatelessWidget {
                   CustomListTile(
                     label: "Payment Method",
                     assetName: AppImages.paymentSvg,
-                  ),    
-              ]),
-              SizedBox(height: 20),
-              ProfileSectionContainer(height: 190, children: [
-                CustomListTile(
-                    label: "FAQs",
-                    assetName: AppImages.faqsSvg,
                   ),
+                ],
+              ),
+              SizedBox(height: 20),
+              ProfileSectionContainer(
+                height: 190,
+                children: [
+                  CustomListTile(label: "FAQs", assetName: AppImages.faqsSvg),
                   CustomListTile(
                     label: "User Reviews",
                     assetName: AppImages.userReviewSvg,
@@ -113,15 +115,19 @@ class ProfileScreen extends StatelessWidget {
                   CustomListTile(
                     label: "Settings",
                     assetName: AppImages.settingsSvg,
-                  ), 
-              ]),
+                  ),
+                ],
+              ),
               SizedBox(height: 20),
-              ProfileSectionContainer(height: 80, children: [
-                CustomListTile(
+              ProfileSectionContainer(
+                height: 80,
+                children: [
+                  CustomListTile(
                     label: "Log Out",
                     assetName: AppImages.logoutSvg,
                   ),
-              ])
+                ],
+              ),
             ],
           ),
         ),

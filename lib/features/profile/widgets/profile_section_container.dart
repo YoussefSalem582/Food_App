@@ -12,7 +12,7 @@ class ProfileSectionContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 300,
+      width: double.infinity,
       height: height,
       decoration: BoxDecoration(
         color: AppColors.profileColor,

@@ -6,8 +6,8 @@ import 'package:food_app/core/functions/navigation.dart';
 import 'package:food_app/core/styles/app_colors.dart';
 import 'package:food_app/core/styles/app_text_styles.dart';
 import 'package:food_app/features/profile/screens/profile_edit_screen.dart';
-import 'package:food_app/features/profile/widgets/profile_section_container.dart';
 import 'package:food_app/features/profile/widgets/custom_list_tile.dart';
+import 'package:food_app/features/profile/widgets/profile_section_container.dart';
 
 class ProfileInfoScreen extends StatelessWidget {
   const ProfileInfoScreen({super.key});
@@ -38,16 +38,14 @@ class ProfileInfoScreen extends StatelessWidget {
               pushTo(context, ProfileEditScreen());
             },
             style: TextButton.styleFrom(
-              textStyle: TextStyle(
-                decoration: TextDecoration.underline, 
-              ),
+              textStyle: TextStyle(decoration: TextDecoration.underline),
             ),
             child: Text(
               "EDIT",
               style: TextStyles.caption1.copyWith(
                 decoration: TextDecoration.underline,
                 color: AppColors.primaryColor,
-                fontFamily: AppFonts.Sen
+                fontFamily: AppFonts.Sen,
               ),
             ),
           ),
@@ -88,7 +86,7 @@ class ProfileInfoScreen extends StatelessWidget {
               ),
               SizedBox(height: 20),
               ProfileSectionContainer(
-                height: 190,
+                height: 210,
                 children: [
                   CustomListTile(
                     label: "FULL NAME",
@@ -100,13 +98,13 @@ class ProfileInfoScreen extends StatelessWidget {
                     label: "EMAIL",
                     field: "hello@halallab.com",
                     assetName: AppImages.emailSvg,
-                    trailing: SizedBox()
+                    trailing: SizedBox(),
                   ),
                   CustomListTile(
                     label: "PHONE NUMBER",
                     field: "408-841-0926",
                     assetName: AppImages.callSvg,
-                    trailing: SizedBox()
+                    trailing: SizedBox(),
                   ),
                 ],
               ),
