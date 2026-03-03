@@ -6,6 +6,7 @@ class RestaurantModel {
   final double rating;
   final String deliveryFee;
   final String deliveryTime;
+  final String description;
 
   RestaurantModel({
     required this.id,
@@ -15,5 +16,7 @@ class RestaurantModel {
     required this.rating,
     required this.deliveryFee,
     required this.deliveryTime,
+    this.description =
+        'Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.',
   });
 }

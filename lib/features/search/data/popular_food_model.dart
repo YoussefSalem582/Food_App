@@ -2,6 +2,8 @@ class PopularFoodModel {
   final String id;
   final String name;
   final String restaurantName;
+  final String restaurantId;
+  final String category;
   final String image;
   final String price;
   final double rating;
@@ -15,6 +17,8 @@ class PopularFoodModel {
     required this.restaurantName,
     required this.image,
     required this.price,
+    this.restaurantId = '',
+    this.category = '',
     this.rating = 4.7,
     this.deliveryFee = 'Free',
     this.deliveryTime = '20 min',
