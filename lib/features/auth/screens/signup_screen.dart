@@ -39,7 +39,7 @@ class _SignupScreenState extends State<SignupScreen> {
               title: 'Sign Up',
               subtitle: 'Please sign up to get started',
               showBackButton: true,
-              backgroundImage: AppImages.patternBackgroundSvg,
+              backgroundImage: AppImages.patternBackgroundorgSvg,
               title_for_email: '',
             ),
 

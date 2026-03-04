@@ -11,6 +11,7 @@ import 'package:food_app/core/widgets/custom_svg_picture.dart';
 import 'package:food_app/features/auth/screens/forget_password_screen.dart';
 import 'package:food_app/features/auth/screens/signup_screen.dart';
 import 'package:food_app/features/auth/widgets/backgraound.dart';
+import 'package:food_app/features/main/main_app_screen.dart';
 
 import 'verification_screen.dart';
 
@@ -143,7 +144,7 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  Navigator.push(
+                                  Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) =>
@@ -172,7 +173,7 @@ class _LoginPageState extends State<LoginPage> {
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) =>
-                                          const VerificationScreen(),
+                                          const MainAppScreen(),
                                     ),
                                   );
                                 }
@@ -197,7 +198,7 @@ class _LoginPageState extends State<LoginPage> {
                                   padding: EdgeInsets.zero,
                                 ),
                                 onPressed: () {
-                                  Navigator.push(
+                                  Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) =>
