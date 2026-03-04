@@ -11,6 +11,8 @@ class MainButton extends StatelessWidget {
     this.height = 62,
     this.width = double.infinity,
     this.textStyle,
+    this.borderWidth,
+    this.borderColor,
   });
   final String text;
   final Function() onPressed;
@@ -18,6 +20,8 @@ class MainButton extends StatelessWidget {
   final double height;
   final double width;
   final TextStyle? textStyle;
+  final double? borderWidth;
+  final Color? borderColor;
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +30,12 @@ class MainButton extends StatelessWidget {
         backgroundColor: bgColor,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         minimumSize: Size(width, height),
+        side: borderColor != null
+      ? BorderSide(
+          color: borderColor!,
+          width: borderWidth ?? 1,
+        )
+      : BorderSide.none,
       ),
       onPressed: onPressed,
       child: Text(
