@@ -62,4 +62,9 @@ class AppImages {
 
   static const String patternBackgroundorgSvg =
       'assets/icons/pattern_icons/pattern_backgroundorg.svg';
+
+  static const String pizzaHut = 'assets/images/pizza_hut.png';
+  static const String mcdonalds = 'assets/images/mc_donalds.png';
+  static const String starbucks = 'assets/images/starbucks.png';
+  
 }
