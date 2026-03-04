@@ -1,4 +1,5 @@
 class AppImages {
+  // App logo and patterns
   static const String logoSvg = 'assets/icons/app_logo.svg';
   static const String patternOrangeSvg =
       'assets/icons/pattern_icons/pattern_orange.svg';
@@ -6,12 +7,15 @@ class AppImages {
       'assets/icons/pattern_icons/pattern_gray.svg';
   static const String patternBackgroundSvg =
       'assets/icons/pattern_icons/pattern_background.svg';
-      
+
+  // Social icons
   static const String facebookSvg = 'assets/icons/social_icons/facebook.svg';
   static const String twitterSvg = 'assets/icons/social_icons/twitter.svg';
   static const String appleSvg = 'assets/icons/social_icons/ios.svg';
 
+  // Bottom navigation icons
   static const String homeSvg = 'assets/icons/bottom_nav/home.svg';
+  static const String cartSvg = 'assets/icons/bottom_nav/cart.svg';
   static const String orderSvg = 'assets/icons/bottom_nav/order.svg';
   static const String profileSvg = 'assets/icons/bottom_nav/user.svg';
 
@@ -39,13 +43,12 @@ class AppImages {
   static const String map = 'assets/images/maps.jpeg';
   static const String visaSvg = 'assets/icons/payment_icons/visa.svg';
   static const String cashSvg = 'assets/icons/payment_icons/cash.svg';
-  static const String cridetCardSvg = 'assets/icons/payment_icons/credit_card.svg';
-  static const String masterCardSvg = 'assets/icons/payment_icons/mastercard.svg';
+  static const String cridetCardSvg =
+      'assets/icons/payment_icons/credit_card.svg';
+  static const String masterCardSvg =
+      'assets/icons/payment_icons/mastercard.svg';
   static const String paypaldSvg = 'assets/icons/payment_icons/paypalicon.svg';
   static const String orderacceptedSvg = 'assets/icons/order_accepted.svg';
-
-
-
 
   // Food category images
   static const String pizza = 'assets/images/pizza.png';
@@ -66,5 +69,4 @@ class AppImages {
   static const String pizzaHut = 'assets/images/pizza_hut.png';
   static const String mcdonalds = 'assets/images/mc_donalds.png';
   static const String starbucks = 'assets/images/starbucks.png';
-  
 }

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/core/constants/app_images.dart';
+import 'package:food_app/core/functions/navigation.dart';
 import 'package:food_app/core/styles/app_colors.dart';
 import 'package:food_app/core/styles/app_text_styles.dart';
 import 'package:food_app/core/widgets/circle_icon_button.dart';
 import 'package:food_app/core/widgets/custom_svg_picture.dart';
+import 'package:food_app/features/my_cart/screens/my_cart_screen.dart';
 
 class HeaderSection extends StatelessWidget {
   const HeaderSection({
@@ -38,9 +41,7 @@ class HeaderSection extends StatelessWidget {
       children: [
         // Leading button
         GestureDetector(
-          onTap:
-              onLeadingTap ??
-              (showBackButton ? () => Navigator.pop(context) : null),
+          onTap: onLeadingTap ?? (showBackButton ? () => pop(context) : null),
           child: CircleIconButton(
             bgColor: AppColors.textfiedColor,
             child: showBackButton
@@ -144,42 +145,12 @@ class HeaderSection extends StatelessWidget {
         if (trailing != null)
           trailing!
         else
-          GestureDetector(
-            onTap: onCartTap,
-            child: Stack(
-              clipBehavior: Clip.none,
-              children: [
-                CircleIconButton(
-                  bgColor: AppColors.blackColor,
-                  child: CustomSvgPicture(
-                    path: 'assets/icons/cart.svg',
-                    color: Colors.white,
-                  ),
-                ),
-                if (cartCount > 0)
-                  Positioned(
-                    top: -4,
-                    right: -4,
-                    child: Container(
-                      width: 20,
-                      height: 20,
-                      decoration: const BoxDecoration(
-                        color: AppColors.primaryColor,
-                        shape: BoxShape.circle,
-                      ),
-                      child: Center(
-                        child: Text(
-                          '$cartCount',
-                          style: TextStyles.caption2.copyWith(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 10,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-              ],
+          CircleIconButton(
+            onTap: onCartTap ?? () => pushTo(context, const CartScreen()),
+            bgColor: AppColors.blackColor,
+            child: CustomSvgPicture(
+              path: AppImages.cartSvg,
+              color: Colors.white,
             ),
           ),
       ],
