@@ -12,6 +12,7 @@ class AppColors {
   static const Color sidetextColor = Color(0xff646982);
   static const Color profileColor = Color(0xffECF0F4);
   static const Color cartColor = Color(0xff369BFF);
+  static const Color doneColor = Color(0xff059C6A);
   static const Color darkblackColor = Color(0xff32343E);
   static const Color inactiveTextColor = Color(0xffA5A7B9);
   static const Color dividerGrey = Color.fromARGB(57, 165, 167, 185);

@@ -6,6 +6,7 @@ class AppImages {
       'assets/icons/pattern_icons/pattern_gray.svg';
   static const String patternBackgroundSvg =
       'assets/icons/pattern_icons/pattern_background.svg';
+      
   static const String facebookSvg = 'assets/icons/social_icons/facebook.svg';
   static const String twitterSvg = 'assets/icons/social_icons/twitter.svg';
   static const String appleSvg = 'assets/icons/social_icons/ios.svg';
@@ -36,6 +37,15 @@ class AppImages {
   static const String deliverySvg = 'assets/icons/delivery.svg';
   static const String clockSvg = 'assets/icons/clock.svg';
   static const String map = 'assets/images/maps.jpeg';
+  static const String visaSvg = 'assets/icons/payment_icons/visa.svg';
+  static const String cashSvg = 'assets/icons/payment_icons/cash.svg';
+  static const String cridetCardSvg = 'assets/icons/payment_icons/credit_card.svg';
+  static const String masterCardSvg = 'assets/icons/payment_icons/mastercard.svg';
+  static const String paypaldSvg = 'assets/icons/payment_icons/paypalicon.svg';
+  static const String orderacceptedSvg = 'assets/icons/order_accepted.svg';
+
+
+
 
   // Food category images
   static const String pizza = 'assets/images/pizza.png';
