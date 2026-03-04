@@ -9,6 +9,8 @@ import 'package:food_app/features/profile/screens/profile_info_screen.dart';
 import 'package:food_app/features/profile/widgets/custom_list_tile.dart';
 import 'package:food_app/features/profile/widgets/profile_section_container.dart';
 
+import '../../my_cart/screens/my_cart_screen.dart';
+
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
@@ -88,6 +90,9 @@ class ProfileScreen extends StatelessWidget {
                   CustomListTile(
                     label: "Cart",
                     assetName: AppImages.profilecartSvg,
+                    onTap: () {
+                      pushTo(context, CartScreen());
+                    },
                   ),
                   CustomListTile(
                     label: "Favourite",

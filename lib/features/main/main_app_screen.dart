@@ -7,8 +7,6 @@ import 'package:food_app/features/home/screens/home_screen.dart';
 import 'package:food_app/features/my_orders/screens/my_orders_screen.dart';
 import 'package:food_app/features/profile/screens/profile_screen.dart';
 
-import '../my_cart/screens/my_cart_screen.dart';
-
 class MainAppScreen extends StatefulWidget {
   const MainAppScreen({super.key});
 
@@ -19,12 +17,7 @@ class MainAppScreen extends StatefulWidget {
 class _MainAppScreenState extends State<MainAppScreen> {
   int currentIndex = 0;
 
-  List<Widget> screens = [
-    HomeScreen(),
-    CartScreen(),
-    MyOrdersScreen(),
-    ProfileScreen(),
-  ];
+  List<Widget> screens = [HomeScreen(), MyOrdersScreen(), ProfileScreen()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,17 +48,6 @@ class _MainAppScreenState extends State<MainAppScreen> {
               color: AppColors.primaryColor,
               height: 24,
               width: 24,
-            ),
-          ),
-          BottomNavigationBarItem(
-            icon: SvgPicture.asset(AppImages.cartSvg, height: 24, width: 24),
-            label: "My Cart",
-            activeIcon: CustomSvgPicture(
-              path: AppImages.cartSvg,
-              color: AppColors.primaryColor,
-              height: 24,
-              width: 24,
-              
             ),
           ),
           BottomNavigationBarItem(
