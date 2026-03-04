@@ -3,18 +3,18 @@ import 'package:flutter/services.dart';
 import 'package:food_app/core/constants/app_images.dart';
 import 'package:food_app/core/styles/app_colors.dart';
 import 'package:food_app/core/widgets/app_button.dart';
-import 'package:food_app/features/auth/screens/login_screen.dart';
 import 'package:food_app/features/auth/widgets/backgraound.dart';
 import 'package:food_app/features/auth/widgets/otbbox.dart';
+import 'package:food_app/features/main/main_app_screen.dart';
 
-class verification_screen extends StatefulWidget {
-  const verification_screen({super.key});
+class VerificationScreen extends StatefulWidget {
+  const VerificationScreen({super.key});
 
   @override
-  State<verification_screen> createState() => _verification_screenState();
+  State<VerificationScreen> createState() => _VerificationScreenState();
 }
 
-class _verification_screenState extends State<verification_screen> {
+class _VerificationScreenState extends State<VerificationScreen> {
   final formKey = GlobalKey<FormState>();
   bool rememberMe = false;
 
@@ -71,7 +71,8 @@ class _verification_screenState extends State<verification_screen> {
                                   Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => const LoginPage(),
+                                      builder: (context) =>
+                                          const MainAppScreen(),
                                     ),
                                   );
                                 }

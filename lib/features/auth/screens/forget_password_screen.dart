@@ -6,8 +6,9 @@ import 'package:food_app/core/styles/app_colors.dart';
 import 'package:food_app/core/styles/app_text_styles.dart';
 import 'package:food_app/core/widgets/app_button.dart';
 import 'package:food_app/core/widgets/app_text_form_field.dart';
-import 'package:food_app/features/auth/screens/verification_screen.dart';
 import 'package:food_app/features/auth/widgets/backgraound.dart';
+
+import 'login_screen.dart';
 
 class ForgotPasswordPage extends StatefulWidget {
   const ForgotPasswordPage({super.key});
@@ -93,8 +94,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                                   Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) =>
-                                          const verification_screen(),
+                                      builder: (context) => const LoginPage(),
                                     ),
                                   );
                                 }
