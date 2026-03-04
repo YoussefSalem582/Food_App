@@ -49,7 +49,7 @@ class _CartScreenState extends State<CartScreen> {
                             AppBackButton(
                               backgroundColor: AppColors.darkblackColor,
                               iconColor: AppColors.backgroundColor,
-                            ), // زرار الرجوع بتاعك
+                            ),
                             const SizedBox(width: 12),
                             Text(
                               "Cart",
