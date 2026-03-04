@@ -35,12 +35,13 @@ class _SignupScreenState extends State<SignupScreen> {
         body: Stack(
           children: [
             /// Top Background
-            const AuthBackground(
+            AuthBackground(
               title: 'Sign Up',
               subtitle: 'Please sign up to get started',
               showBackButton: true,
               backgroundImage: AppImages.patternBackgroundorgSvg,
               title_for_email: '',
+              onBackPressed: () => Navigator.of(context).pop(),
             ),
 
             /// Bottom Form Container

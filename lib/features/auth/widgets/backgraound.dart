@@ -10,6 +10,7 @@ class AuthBackground extends StatelessWidget {
   final String title_for_email;
   final bool showBackButton;
   final String backgroundImage;
+  final VoidCallback? onBackPressed;
 
   const AuthBackground({
     super.key,
@@ -18,6 +19,7 @@ class AuthBackground extends StatelessWidget {
     required this.title_for_email,
     this.showBackButton = false,
     required this.backgroundImage,
+    this.onBackPressed,
   });
 
   @override
@@ -40,7 +42,10 @@ class AuthBackground extends StatelessWidget {
               Positioned(
                 top: MediaQuery.of(context).padding.top + 16,
                 left: 20,
-                child: AppBackButton(onTap: () => Navigator.pop(context)),
+                child: AppBackButton(
+                  onTap:
+                      onBackPressed ?? () => Navigator.of(context).maybePop(),
+                ),
               ),
 
             Positioned(
@@ -73,7 +78,6 @@ class AuthBackground extends StatelessWidget {
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  
                 ],
               ),
             ),

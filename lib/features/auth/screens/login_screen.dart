@@ -13,8 +13,6 @@ import 'package:food_app/features/auth/screens/signup_screen.dart';
 import 'package:food_app/features/auth/widgets/backgraound.dart';
 import 'package:food_app/features/main/main_app_screen.dart';
 
-import 'verification_screen.dart';
-
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -144,7 +142,7 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  Navigator.pushReplacement(
+                                  Navigator.push(
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) =>
@@ -198,7 +196,7 @@ class _LoginPageState extends State<LoginPage> {
                                   padding: EdgeInsets.zero,
                                 ),
                                 onPressed: () {
-                                  Navigator.pushReplacement(
+                                  Navigator.push(
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) =>

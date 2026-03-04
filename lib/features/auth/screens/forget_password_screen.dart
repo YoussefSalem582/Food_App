@@ -9,8 +9,6 @@ import 'package:food_app/core/widgets/app_text_form_field.dart';
 import 'package:food_app/features/auth/screens/verification_screen.dart';
 import 'package:food_app/features/auth/widgets/backgraound.dart';
 
-import 'login_screen.dart';
-
 class ForgotPasswordPage extends StatefulWidget {
   const ForgotPasswordPage({super.key});
 
@@ -36,12 +34,13 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
         body: SafeArea(
           child: Stack(
             children: [
-              const AuthBackground(
+              AuthBackground(
                 title: 'Forgot Password',
                 subtitle: 'Please sign in to your existing account',
                 showBackButton: true,
                 backgroundImage: AppImages.patternBackgroundorgSvg,
                 title_for_email: '',
+                onBackPressed: () => Navigator.of(context).pop(),
               ),
 
               Align(
@@ -92,7 +91,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                               text: 'SEND CODE',
                               onPressed: () {
                                 if (formKey.currentState!.validate()) {
-                                  Navigator.pushReplacement(
+                                  Navigator.push(
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) => const VerificationScreen(),

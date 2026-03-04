@@ -32,12 +32,13 @@ class _VerificationScreenState extends State<VerificationScreen> {
         body: SafeArea(
           child: Stack(
             children: [
-              const AuthBackground(
+              AuthBackground(
                 title: 'Verification',
                 subtitle: 'We have sent a code to your email',
                 title_for_email: ' example@gmail.com ',
                 showBackButton: true,
                 backgroundImage: AppImages.patternBackgroundorgSvg,
+                onBackPressed: () => Navigator.of(context).pop(),
               ),
 
               Align(
